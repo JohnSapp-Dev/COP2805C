@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B9F6CA"
+    android:backgroundTint="#B9F6CA"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/page2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Amount to convert"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="113dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#4FC3F7"
+        android:onClick="returnClick"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page2Title"
+        app:layout_constraintVertical_bias="0.653"
+        app:rippleColor="#42A5F5" />
+
+    <EditText
+        android:id="@+id/USDExchangeRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page2Title" />
+
+    <EditText
+        android:id="@+id/exchangeRateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/returnBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/USDExchangeRate"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="113dp"
+        android:layout_height="68dp"
+        android:backgroundTint="#4FC3F7"
+        android:onClick="convertFromUSD"
+        app:layout_constraintBottom_toTopOf="@+id/returnBtn"
+        app:layout_constraintEnd_toStartOf="@+id/returnBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#42A5F5" />
+
+    <TextView
+        android:id="@+id/page2TextUSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/USDExchangeRate"
+        app:layout_constraintEnd_toStartOf="@+id/USDExchangeRate"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/USDExchangeRate" />
+
+    <TextView
+        android:id="@+id/page2TextTarget"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/exchangeRateText"
+        app:layout_constraintEnd_toStartOf="@+id/exchangeRateText"
+        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintStart_toStartOf="@+id/page2TextUSD"
+        app:layout_constraintTop_toTopOf="@+id/exchangeRateText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="113dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#4FC3F7"
+        android:onClick="convertToUSD"
+        android:text="Convert to USD"
+        app:layout_constraintBottom_toBottomOf="@+id/convertBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/returnBtn"
+        app:layout_constraintTop_toTopOf="@+id/convertBtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#42A5F5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
